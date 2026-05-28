@@ -1,0 +1,109 @@
+.analytics-page { min-height: 100vh; padding-top: 64px; }
+.analytics-loading {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 60vh; gap: 20px; color: var(--gray-400);
+}
+.analytics-inner { max-width: 900px; margin: 0 auto; padding: 48px 24px; }
+.analytics-header { margin-bottom: 40px; }
+.back-link {
+  display: inline-block;
+  color: var(--gray-400); text-decoration: none;
+  font-size: 13px; font-family: var(--font-mono);
+  margin-bottom: 24px;
+  transition: color var(--transition);
+}
+.back-link:hover { color: white; }
+.analytics-header h1 {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 800; letter-spacing: -2px;
+  margin-bottom: 16px;
+}
+.analytics-url-info { display: flex; flex-direction: column; gap: 6px; }
+.analytics-short-url { display: flex; align-items: center; gap: 12px; }
+.analytics-short-url a {
+  font-family: var(--font-mono); font-size: 18px; font-weight: 600;
+  text-decoration: none;
+  background: linear-gradient(135deg, #fff, #888);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.copy-btn-sm {
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius); padding: 5px 12px;
+  color: var(--gray-400); font-size: 12px; font-family: var(--font-mono);
+  cursor: pointer; transition: all var(--transition);
+}
+.copy-btn-sm:hover { background: rgba(255,255,255,0.14); color: white; }
+.analytics-orig-url {
+  font-family: var(--font-mono); font-size: 13px; color: var(--gray-600);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 600px;
+}
+
+/* Stats */
+.analytics-stats {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 12px; margin-bottom: 32px;
+}
+.analytics-stat-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-lg);
+  padding: 20px; text-align: center;
+}
+.astat-num {
+  display: block;
+  font-size: 22px; font-weight: 800; letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #fff, #777);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  margin-bottom: 6px;
+}
+.astat-label { font-size: 11px; color: var(--gray-600); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* Chart */
+.analytics-chart-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  margin-bottom: 32px;
+}
+.analytics-chart-card h2 { font-size: 16px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 24px; }
+.chart-wrap { width: 100%; }
+
+/* Visits */
+.analytics-visits {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+}
+.analytics-visits h2 { font-size: 16px; font-weight: 700; letter-spacing: -0.3px; margin-bottom: 20px; }
+.visits-table { display: flex; flex-direction: column; gap: 0; }
+.visits-head {
+  display: grid; grid-template-columns: 200px 1fr 120px;
+  gap: 16px; padding: 10px 12px;
+  font-size: 10px; font-family: var(--font-mono);
+  color: var(--gray-600); text-transform: uppercase; letter-spacing: 0.08em;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.visit-row {
+  display: grid; grid-template-columns: 200px 1fr 120px;
+  gap: 16px; padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  font-size: 12px; font-family: var(--font-mono);
+  transition: background var(--transition);
+  align-items: center;
+}
+.visit-row:hover { background: rgba(255,255,255,0.02); }
+.visit-time { color: var(--gray-400); white-space: nowrap; }
+.visit-ua { color: var(--gray-600); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.visit-ip { color: var(--gray-600); }
+.no-visits { text-align: center; padding: 40px; color: var(--gray-600); font-family: var(--font-mono); font-size: 13px; }
+
+@media (max-width: 768px) {
+  .analytics-stats { grid-template-columns: repeat(2, 1fr); }
+  .visits-head, .visit-row { grid-template-columns: 1fr 1fr; }
+  .visits-head span:last-child, .visit-row .visit-ip { display: none; }
+}
+@media (max-width: 480px) {
+  .analytics-stats { grid-template-columns: repeat(2, 1fr); }
+}
