@@ -156,7 +156,7 @@ Open `http://localhost:3000` in your browser.
 ---
 ##### My Learning Experience
 
-This project was a great learning experience for me as I am new to full-stack application development. While building this URL Shortener application, I faced several challenges, especially in connecting the frontend, backend, and database together properly.
+This project was a great learning experience for me as I am new to full-stack application development using react and nodejs with mongodb. While building this URL Shortener application, I faced several challenges, especially in connecting the frontend, backend, and database together properly.
 
 One of the biggest difficulties was making the application work correctly on mobile devices and handling responsive UI changes. I also faced issues during video recording, voice explanation, and demonstrating the complete workflow of the project.
 
